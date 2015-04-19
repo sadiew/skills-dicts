@@ -138,7 +138,7 @@ def sum_zero(list1):
     pairs_set = set()
 
     for i in list1:
-        for j in list1[i+1:]:
+        for j in list1:
             if i + j == 0 and (j,i) not in pairs_set:
                 pairs_set.add((i,j))
 
