@@ -135,13 +135,14 @@ def sum_zero(list1):
         [[-2, 2], [-1, 1], [0, 0]]
 
     """
-    pairs_dict = {}
+    pairs_set = set()
+
     for i in list1:
         for j in list1[i+1:]:
-            if i + j == 0 and (j,i) not in pairs_dict:
-                pairs_dict[(i,j)] = 1
+            if i + j == 0 and (j,i) not in pairs_set:
+                pairs_set.add((i,j))
 
-    return pairs_dict.keys()
+    return list(pairs_set)
 
 
 def find_duplicates(words):
